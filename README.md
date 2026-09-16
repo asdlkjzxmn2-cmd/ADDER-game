@@ -1,6 +1,6 @@
-# ADDER — V17 PC 검수본
+# ADDER — V18 PC 검수본
 
-아직 GitHub에 업로드하지 않았습니다. PC 검수 → 같은 V17에서 수정 → 사용자의 명시적 배포 승인 후에만 기존 저장소에 배포합니다. 상세 계산/분석은 V17_DESIGN.md, 검증은 TEST_RESULTS.md를 참고하세요.
+V18은 로컬 검수본이며 배포하지 않았습니다. 현재 공개 버전은 V17입니다. 별도 승인 후에만 V18을 배포합니다. PC 검수 → 같은 V18에서 수정 → 사용자의 명시적 배포 승인 후에만 기존 저장소에 배포합니다. 상세 계산/분석은 V18_DESIGN.md, 검증은 TEST_RESULTS.md를 참고하세요.
 
 기존 저장소에 수동 반영할 때는 이 adder-game 폴더 **안의 파일과 폴더 전체**를 저장소 루트에 올립니다. docs/ 전체를 함께 교체하고 source/, release.json, rebuild.cjs, 문서도 갱신하세요. versions/는 추가·보존하고 이전 버전을 삭제하지 마세요. 기존 CNAME이나 별도 설정이 있다면 보존하세요. 같은 main /docs와 같은 Pages 주소를 사용합니다.
 
@@ -10,7 +10,7 @@ PC 독립실행과 GitHub Pages PWA를 같은 원본에서 생성합니다. 완�
 
 ```text
 adder-game/
-  ADDER_V17.html             PC 독립실행판
+  ADDER_V18.html             PC 독립실행판
   docs/                     GitHub Pages 공개 폴더
     index.html              CSS·JS·그림이 포함된 단일 게임 HTML
     manifest.webmanifest
@@ -18,7 +18,7 @@ adder-game/
     icons/                  192/512 PNG, Apple 180 PNG
     .nojekyll
   source/                   게임 원본 + PWA 원본
-  versions/                 변경하지 않은 V15·V16 HTML 및 원본 ZIP
+  versions/                 변경하지 않은 V15·V16·V17 HTML 및 원본 ZIP
   release.json              현재 버전
   rebuild.cjs
   server.cjs
@@ -33,7 +33,7 @@ adder-game/
 2. 압축을 풀고 **adder-game 안의 내용 전체**를 저장소 최상위에 업로드하여 `main`에 커밋하세요. `docs`가 저장소 바로 아래에 있어야 합니다. ZIP 자체나 `adder-game/adder-game/docs`처럼 이중 폴더를 올리지 마세요.
 3. 저장소 **Settings → Pages → Build and deployment → Source: Deploy from a branch**를 선택하세요.
 4. **Branch: main / Folder: /docs → Save**를 선택하세요.
-5. 배포 완료 후 Settings → Pages에 표시된 실제 주소를 사용하세요. 기본 형태는 `https://사용자명.github.io/adder-game/`입니다. 끝의 `/`를 포함하세요.
+5. 배포 완료 후 Settings → Pages에 표시된 실제 주소를 사용하세요. 기본 형태는 `https://asdlkjzxmn2-cmd.github.io/ADDER-game/`입니다. 끝의 `/`를 포함하세요.
 
 현재 결과물은 업로드 준비 폴더이며, 실제 GitHub 저장소 생성/업로드/온라인 공개는 수행하지 않았습니다. 앞으로 같은 저장소, 같은 Pages 주소를 유지합니다.
 
@@ -41,9 +41,9 @@ adder-game/
 
 ## PC에서 실행
 
-- `ADDER_V17.html`을 Chrome 또는 Edge로 더블클릭해 여세요. 인터넷과 Node.js 설치가 필요 없습니다.
+- `ADDER_V18.html`을 Chrome 또는 Edge로 더블클릭해 여세요. 인터넷과 Node.js 설치가 필요 없습니다.
 - 자동 저장은 브라우저에 남습니다. 버전 교체 전 SAVE → 현재 진행 파일 저장으로 백업하세요.
-- 기존 V15 진행은 V15에서 파일 저장한 후 V17에서 파일 불러오기를 사용하세요.
+- 기존 V15 진행은 V15에서 파일 저장한 후 V18에서 파일 불러오기를 사용하세요.
 
 ## iPad/iPhone 홈 화면 설치
 
@@ -73,10 +73,10 @@ adder-game/
 5. 다음 실행에서 새 버전과 기존 IndexedDB 진행을 읽습니다. 기기별 종료·활성화 시점은 브라우저가 관리합니다.
 6. 다운로드 실패/불완전 배포는 설치 실패로 처리하며 기존 캐시와 진행은 유지됩니다. 네트워크 재연결 후 다시 확인합니다.
 
-## V17 이후 제작
+## V18 이후 제작
 
 1. 이전 독립 HTML을 `versions/`에 보존하세요. V15 보존 파일은 변경하지 마세요.
-2. `source/`를 수정하고 `release.json`을 `{"version":"V17"}`처럼 변경하세요.
+2. `source/`를 수정하고 `release.json`을 `{"version":"V18"}`처럼 변경하세요.
 3. Node.js가 있는 개발 PC에서 `node rebuild.cjs`를 실행하세요. 플레이어 PC에는 Node.js가 필요 없습니다.
 4. 새 독립 HTML과 `docs/` 결과물을 테스트하고 CHANGELOG를 기록한 다음 **같은 저장소의 main에 완성 결과 전체를 함께 커밋**하세요.
 5. `docs/index.html`만 편집하면 워커의 해시 검증과 달라져 설치가 거부됩니다. 항상 rebuild로 함께 생성하세요.

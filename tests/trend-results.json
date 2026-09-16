@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "days": 365,
+  "salesCases": 200,
+  "totals": {
+    "up": 50,
+    "down": 41
+  }
+}

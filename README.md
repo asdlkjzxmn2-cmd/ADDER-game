@@ -1,4 +1,8 @@
-# ADDER — V16
+# ADDER — V17 PC 검수본
+
+아직 GitHub에 업로드하지 않았습니다. PC 검수 → 같은 V17에서 수정 → 사용자의 명시적 배포 승인 후에만 기존 저장소에 배포합니다. 상세 계산/분석은 V17_DESIGN.md, 검증은 TEST_RESULTS.md를 참고하세요.
+
+기존 저장소에 수동 반영할 때는 이 adder-game 폴더 **안의 파일과 폴더 전체**를 저장소 루트에 올립니다. docs/ 전체를 함께 교체하고 source/, release.json, rebuild.cjs, 문서도 갱신하세요. versions/는 추가·보존하고 이전 버전을 삭제하지 마세요. 기존 CNAME이나 별도 설정이 있다면 보존하세요. 같은 main /docs와 같은 Pages 주소를 사용합니다.
 
 PC 독립실행과 GitHub Pages PWA를 같은 원본에서 생성합니다. 완성된 결과가 포함되어 있으므로 플레이하거나 GitHub에 올릴 때 빌드/설치는 필요 없습니다.
 
@@ -6,7 +10,7 @@ PC 독립실행과 GitHub Pages PWA를 같은 원본에서 생성합니다. 완�
 
 ```text
 adder-game/
-  ADDER_V16.html             PC 독립실행판
+  ADDER_V17.html             PC 독립실행판
   docs/                     GitHub Pages 공개 폴더
     index.html              CSS·JS·그림이 포함된 단일 게임 HTML
     manifest.webmanifest
@@ -14,7 +18,7 @@ adder-game/
     icons/                  192/512 PNG, Apple 180 PNG
     .nojekyll
   source/                   게임 원본 + PWA 원본
-  versions/                 변경하지 않은 V15 HTML 및 원본 ZIP
+  versions/                 변경하지 않은 V15·V16 HTML 및 원본 ZIP
   release.json              현재 버전
   rebuild.cjs
   server.cjs
@@ -37,9 +41,9 @@ adder-game/
 
 ## PC에서 실행
 
-- `ADDER_V16.html`을 Chrome 또는 Edge로 더블클릭해 여세요. 인터넷과 Node.js 설치가 필요 없습니다.
+- `ADDER_V17.html`을 Chrome 또는 Edge로 더블클릭해 여세요. 인터넷과 Node.js 설치가 필요 없습니다.
 - 자동 저장은 브라우저에 남습니다. 버전 교체 전 SAVE → 현재 진행 파일 저장으로 백업하세요.
-- 기존 V15 진행은 V15에서 파일 저장한 후 V16에서 파일 불러오기를 사용하세요.
+- 기존 V15 진행은 V15에서 파일 저장한 후 V17에서 파일 불러오기를 사용하세요.
 
 ## iPad/iPhone 홈 화면 설치
 

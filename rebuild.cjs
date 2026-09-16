@@ -1,0 +1,23 @@
+// No npm dependencies: Node.js is required only for rebuilding, not playing.
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const root=__dirname,src=path.join(root,'source'),docs=path.join(root,'docs');
+const version=JSON.parse(fs.readFileSync(path.join(root,'release.json'),'utf8')).version;
+if(!/^V\d+$/.test(version))throw Error('Invalid release version');
+const read=n=>fs.readFileSync(path.join(src,n),'utf8').replace(/V16/g,version);
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+const logic='globalThis.AdderLogic=(()=>{\n'+read('logic.js').replace(/export /g,'')+'\nreturn {meta,setup,validateAction,applyAction,isGameOver,viewFor};})();';
+const scripts=[logic,read('local-runtime.js'),read('client.js')].map(s=>'<script>\n'+s.replace(/<\/script/gi,'<\\/script')+'\n</script>').join('\n');
+const html=read('template.html').replace('<!--STYLE-->',()=>'<style>\n'+read('style.css')+'\n</style>').replace('<!--SCRIPTS-->',()=>scripts);
+fs.writeFileSync(path.join(root,`ADDER_${version}.html`),html);
+fs.mkdirSync(docs,{recursive:true});
+const pwa=html.replace('</head>','<link rel="manifest" href="./manifest.webmanifest">\n<link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">\n</head>').replace('</body>',()=>'<script>\n'+read('pwa.js')+'\n</script>\n</body>');
+fs.writeFileSync(path.join(docs,'index.html'),pwa);
+fs.copyFileSync(path.join(src,'manifest.webmanifest'),path.join(docs,'manifest.webmanifest'));
+fs.writeFileSync(path.join(docs,'.nojekyll'),'');
+const names=['index.html','manifest.webmanifest','icons/icon-192.png','icons/icon-512.png','icons/apple-touch-icon.png'];
+const assets=names.map(name=>({path:name,sha256:hash(fs.readFileSync(path.join(docs,name)))}));
+const workerTemplate=read('service-worker.template.js');
+const build=version+'-'+hash(JSON.stringify(assets)+workerTemplate).slice(0,16);
+const worker=workerTemplate.replace('__BUILD_JSON__',JSON.stringify(build)).replace('__ASSETS_JSON__',JSON.stringify(assets));
+fs.writeFileSync(path.join(docs,'service-worker.js'),worker);
+console.log(`Built PC ${version} + docs/ (${build})`);

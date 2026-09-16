@@ -1,5 +1,5 @@
-const BUILD="V17-7911d133b840aef9";
-const ASSETS=[{"path":"index.html","sha256":"476aa3b8f01fd784a8f45150ee3c7d90b12d50909b09773fcfec48826d1f34a3"},{"path":"manifest.webmanifest","sha256":"bc7f120bef159025016c4d2b5b2225ac5e6fda8a02ee58fbe4e97ec1d92a2083"},{"path":"icons/icon-192.png","sha256":"54986ccd0fc04e3143f8c2295c20c3f43d204cef54197a8119327892672db85f"},{"path":"icons/icon-512.png","sha256":"f4587a6a8aa4eef88b78dab9ba74baa4213203723240996ee1e5a7c544ba8148"},{"path":"icons/apple-touch-icon.png","sha256":"b9fb6498bcefda55f0523e5e5440b3dfc6fd3911bcfbccbce5eb8b9e6da92b7f"}];
+const BUILD="V17-eb8831c8762d018c";
+const ASSETS=[{"path":"index.html","sha256":"8d3f476b51c4da2093606e8e6a29180a0baa14cf74442046b5e0ac00a1c3aef7"},{"path":"manifest.webmanifest","sha256":"bc7f120bef159025016c4d2b5b2225ac5e6fda8a02ee58fbe4e97ec1d92a2083"},{"path":"icons/icon-192.png","sha256":"54986ccd0fc04e3143f8c2295c20c3f43d204cef54197a8119327892672db85f"},{"path":"icons/icon-512.png","sha256":"f4587a6a8aa4eef88b78dab9ba74baa4213203723240996ee1e5a7c544ba8148"},{"path":"icons/apple-touch-icon.png","sha256":"b9fb6498bcefda55f0523e5e5440b3dfc6fd3911bcfbccbce5eb8b9e6da92b7f"}];
 const BASE=new URL('./',self.location.href);
 const PREFIX='adder-pwa:'+BASE.pathname+':';
 const CACHE=PREFIX+BUILD;

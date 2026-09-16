@@ -1076,7 +1076,7 @@ body[data-scene="market"] .panel:after,body[data-scene="inventory"] .panel:after
 .save-row-main{min-width:0;overflow-wrap:anywhere}
 body.save-open{overflow:hidden}
 .toast{z-index:5000!important}
-@media(min-width:700px){#tabs.tabs:before,.sticky-shell .tabs:before{content:"ADDER\A V18"!important}}
+@media(min-width:700px){#tabs.tabs:before,.sticky-shell .tabs:before{content:"ADDER\A V19"!important}}
 @media(max-width:699px){.shop-scene{grid-template-columns:minmax(0,1fr)}.sales-history-head{display:none!important}.sales-history-list .sales-history-row{grid-template-columns:minmax(0,1fr)!important}.save-create{grid-template-columns:minmax(0,1fr)!important}.save-file-tools{display:flex!important;flex-direction:column;align-items:stretch}.save-file-actions{display:flex;flex-wrap:wrap}.save-file-actions .btn{flex:1 1 140px}.save-row{grid-template-columns:minmax(0,1fr)!important}}
 
 /* V16 viewport checkout; section anchors keep the last products reachable. */
@@ -1138,5 +1138,7 @@ body[data-scene="market"] .workspace-body{overflow:hidden;display:flex}
 /* V16: every tab has a bounded scroll surface below the fixed HUD. */
 .workspace-header[hidden]{display:none!important}.workspace-body{overflow-x:hidden;scroll-padding-top:8px}.pwa-status:empty{display:none}.workspace-body>.shop-scene{margin-top:0!important}
 
-/* V18: fit within the existing HOME card, including narrow screens. */
+/* V19: fit within the existing HOME card, including narrow screens. */
 .weekly-trends{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0;max-width:100%}
+
+.operating-note,.stock-age-note{font-size:12px;line-height:1.6;overflow-wrap:anywhere;color:#786d5f}.stock-age-note{margin:8px 0}.long-stock{color:#a24a38;font-weight:700}

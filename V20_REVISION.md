@@ -23,3 +23,6 @@ PC: ADDER_V20.html 더블클릭. 기존 PC 파일과 경로가 달라지면 SAVE
 GitHub: 이 adder-game 폴더의 내용 전체를 기존 저장소 루트에 병합합니다(폴더 자체를 한 단계 더 넣지 않음). docs/, source/, ADDER_V20.html, 문서/테스트/추가 보존 파일을 갱신하고 기존 versions 파일은 삭제하지 않습니다. Pages는 main /docs를 그대로 사용합니다.
 주소: https://asdlkjzxmn2-cmd.github.io/ADDER-game/
 PWA: 온라인에서 수정판 다운로드 후 현재 플레이는 유지됩니다. Safari 게임 탭과 홈 화면 앱 등 모든 게임 창을 닫은 뒤 다시 실행하세요. 캐시 및 사이트 데이터 삭제는 필요하지 않습니다.
+
+## 공개 배포 확인
+구현 커밋 8f44f89 / PWA V20-d3b9c047c3c9d4dd. 공개 주소의 최신 파일 일치, 실제 베스트셀러 집계, 성별 전환·촬영·저장 복원, 주황 별 및 PWA 오프라인 검증 통과. DEPLOYMENT.md 참조.

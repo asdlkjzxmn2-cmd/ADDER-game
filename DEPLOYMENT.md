@@ -1,13 +1,12 @@
-# V20 배포 완료 — 2026-09-17
-- 기존 저장소: https://github.com/asdlkjzxmn2-cmd/ADDER-game
-- 기존 Pages: https://asdlkjzxmn2-cmd.github.io/ADDER-game/
-- 기준: 사용자 수동 업로드 V19 a994c6f.
-- V20 구현 배포 커밋: 061fb0d.
-- 공개 HTML SHA-256이 제공한 docs/index.html과 일치. 버전 표시, HOME/BUY/REORDER/STOCK/ORDERS/ORIGINAL, SAVE 확인.
-- 공개 주소의 별도 테스트 브라우저에서 거래처 3종 양방향 정렬, 미거래 마지막, 즐겨찾기 필터, 상품 사진 3개 탭 아이콘, 주문 베스트셀러 배지, 경영 통계 검증 통과. 사용자 실제 세이브를 조작하지 않았습니다.
-- manifest 상대경로, 서비스워커 활성화 및 제어, 오프라인 재실행 확인. 각 사용자 기기의 현재 waiting/활성화 상태는 원격으로 알 수 없습니다.
-- 기존 V19 및 과거 버전 수정/삭제 없이 versions에 V19 HTML 및 당시 GitHub 저장소 ZIP 추가.
-- 반영: docs/index.html·manifest·service-worker, source/logic.js·client.js·style.css·template.html, ADDER_V20.html, rebuild/release, CHANGELOG/README/분석/테스트/보존 파일. manifest의 의미와 아이콘/SW 템플릿/저장 런타임은 유지(줄바꿈 차이는 빌드 해시에 반영).
-- 플레이 강제 새로고침 없음. 온라인에서 새판을 받은 뒤 기존 ADDER 창을 모두 종료하고 다시 실행하면 준비된 버전 적용. IndexedDB 저장 데이터 초기화 없음.
-- 로컬 V19 운영비·입고 묶음 회귀 테스트도 통과.
-- V21 개발은 시작하지 않았습니다. 테스트 중 V21/V22라는 표시는 PWA 업데이트 수명주기 검증용 임시 문자열뿐입니다.
+# V20 수정판 배포 완료 — 2026-09-17
+- 저장소: https://github.com/asdlkjzxmn2-cmd/ADDER-game
+- 게임: https://asdlkjzxmn2-cmd.github.io/ADDER-game/
+- 기준 V20: d940886. 수정판 구현 배포 커밋: 8f44f89.
+- 공개 docs/index.html SHA-256: 6cce4c36accd17a6c521cb3ae68737e2086ba8a83a1731046c7fea6e5a119eac. 제공 파일과 일치.
+- PWA 빌드: V20-d3b9c047c3c9d4dd. 버전 표시는 V20 유지.
+- 공개 주소 검증: V20 표시, 6개 핵심 화면, SAVE, 실제 완료영업일 집계, manifest, Service Worker 활성화 및 제어, 오프라인 재실행 통과.
+- 공개 주소의 격리된 브라우저에서도 PC/iPad 크기 4종, 여성2/1/3·남성4/2/1 표시, 선택 즉시 전환, 실제 촬영 +1, 저장 재로딩 및 파일 내보내기/불러오기, 3개 탭 주황 별 확인. 사용자 실제 세이브에는 접근하거나 변경하지 않았습니다.
+- 변경: source/logic.js·client.js·style.css, ADDER_V20.html, docs/index.html·service-worker.js, CHANGELOG/TEST_RESULTS/V20_REVISION/DEPLOYMENT 및 테스트 파일. versions에 수정 전 V20 HTML/당시 저장소 ZIP을 추가했으며 기존 보존본은 수정·삭제하지 않았습니다.
+- IndexedDB 이름/버전/저장 포맷, PWA 업데이트 템플릿 및 남녀 고객 유입 계산은 유지했습니다.
+- 강제 새로고침 없음. 온라인에서 준비된 수정판은 기존 게임 창을 모두 닫은 뒤 다시 실행하면 적용됩니다. 각 사용자 기기의 현재 waiting/활성화 여부는 원격으로 확인할 수 없습니다.
+- 기존 저장소 main /docs 설정 유지. 새 저장소나 Pages 사이트를 만들지 않았습니다. V21 개발 없음.

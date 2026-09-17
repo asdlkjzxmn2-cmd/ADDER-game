@@ -1,0 +1,42 @@
+[
+  {
+    "scenario": "female",
+    "samples": 10000,
+    "beforeFemale": 70,
+    "afterFemale": 82.7,
+    "actualFemale": 8247,
+    "actualMale": 1753
+  },
+  {
+    "scenario": "male",
+    "samples": 10000,
+    "beforeFemale": 70,
+    "afterFemale": 23.3,
+    "actualFemale": 2277,
+    "actualMale": 7723
+  },
+  {
+    "scenario": "balanced",
+    "samples": 10000,
+    "beforeFemale": 70,
+    "afterFemale": 53.5,
+    "actualFemale": 5317,
+    "actualMale": 4683
+  },
+  {
+    "scenario": "unshot",
+    "samples": 10000,
+    "beforeFemale": 70,
+    "afterFemale": 70,
+    "actualFemale": 6784,
+    "actualMale": 3216
+  },
+  {
+    "scenario": "oneMale",
+    "samples": 10000,
+    "beforeFemale": 70,
+    "afterFemale": 58.4,
+    "actualFemale": 5624,
+    "actualMale": 4376
+  }
+]

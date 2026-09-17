@@ -1076,7 +1076,7 @@ body[data-scene="market"] .panel:after,body[data-scene="inventory"] .panel:after
 .save-row-main{min-width:0;overflow-wrap:anywhere}
 body.save-open{overflow:hidden}
 .toast{z-index:5000!important}
-@media(min-width:700px){#tabs.tabs:before,.sticky-shell .tabs:before{content:"ADDER\A V19"!important}}
+@media(min-width:700px){#tabs.tabs:before,.sticky-shell .tabs:before{content:"ADDER\A V20"!important}}
 @media(max-width:699px){.shop-scene{grid-template-columns:minmax(0,1fr)}.sales-history-head{display:none!important}.sales-history-list .sales-history-row{grid-template-columns:minmax(0,1fr)!important}.save-create{grid-template-columns:minmax(0,1fr)!important}.save-file-tools{display:flex!important;flex-direction:column;align-items:stretch}.save-file-actions{display:flex;flex-wrap:wrap}.save-file-actions .btn{flex:1 1 140px}.save-row{grid-template-columns:minmax(0,1fr)!important}}
 
 /* V16 viewport checkout; section anchors keep the last products reachable. */
@@ -1138,7 +1138,11 @@ body[data-scene="market"] .workspace-body{overflow:hidden;display:flex}
 /* V16: every tab has a bounded scroll surface below the fixed HUD. */
 .workspace-header[hidden]{display:none!important}.workspace-body{overflow-x:hidden;scroll-padding-top:8px}.pwa-status:empty{display:none}.workspace-body>.shop-scene{margin-top:0!important}
 
-/* V19: fit within the existing HOME card, including narrow screens. */
+/* V20: fit within the existing HOME card, including narrow screens. */
 .weekly-trends{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0;max-width:100%}
 
 .operating-note,.stock-age-note{font-size:12px;line-height:1.6;overflow-wrap:anywhere;color:#786d5f}.stock-age-note{margin:8px 0}.long-stock{color:#a24a38;font-weight:700}
+
+/* V20 compact controls and overlays: no card-size changes. */
+.bestseller-icon{position:absolute;right:10px;top:10px;width:24px;height:24px;display:grid;place-items:center;background:#f0d58e;color:#66501c;border-radius:50%;font-size:15px;z-index:2;pointer-events:none}.bestseller-tag{background:#f0d58e;color:#66501c}.supplier-directory-sort{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.supplier-directory-sort label{display:flex;align-items:center;gap:4px;flex:1;min-width:0;font-size:11px}.supplier-directory-sort select{width:100%;min-width:0;min-height:44px;background:#faf7f1;border:1px solid #cfc5b7;border-radius:10px;padding:4px}.supplier-directory-sort button{min-height:44px;padding:6px;font-size:11px}.supplier-favorite-controls label{min-height:44px}.supplier-favorite-controls span{white-space:nowrap}.management-overview,.management-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:10px 0}.management-overview span,.management-metrics>div{min-width:0;padding:8px;border-radius:10px;background:#f0ebe2}.management-overview small,.management-metrics small{display:block;color:#7d7568;font-size:11px}.management-overview b,.management-metrics b{display:block;font-size:14px;overflow-wrap:anywhere}.management-detail{padding:12px 0;border-bottom:1px solid #d8cebf;margin-bottom:12px;overflow-wrap:anywhere}.management-detail select{min-height:44px;max-width:160px}.management-detail p{font-size:12px}@media(max-width:600px){.management-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.management-overview b{font-size:12px}}
+.supplier-directory-sort label{white-space:nowrap}.supplier-directory-sort select{width:0;flex:1;min-width:80px}.management-detail select{background:#faf7f1;border:1px solid #cfc5b7;border-radius:10px;padding:8px}

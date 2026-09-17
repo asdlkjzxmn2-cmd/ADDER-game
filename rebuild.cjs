@@ -3,7 +3,7 @@ const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypt
 const root=__dirname,src=path.join(root,'source'),docs=path.join(root,'docs');
 const version=JSON.parse(fs.readFileSync(path.join(root,'release.json'),'utf8')).version;
 if(!/^V\d+$/.test(version))throw Error('Invalid release version');
-const read=n=>fs.readFileSync(path.join(src,n),'utf8').replace(/V19/g,version);
+const read=n=>fs.readFileSync(path.join(src,n),'utf8').replace(/V20/g,version);
 const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 const logic='globalThis.AdderLogic=(()=>{\n'+read('logic.js').replace(/export /g,'')+'\nreturn {meta,setup,validateAction,applyAction,isGameOver,viewFor};})();';
 const scripts=[logic,read('local-runtime.js'),read('client.js')].map(s=>'<script>\n'+s.replace(/<\/script/gi,'<\\/script')+'\n</script>').join('\n');

@@ -1,2 +1,13 @@
-# V20 배포
-기존 저장소 main /docs에 배포하며 승인된 기존 주소를 유지합니다. 공개 검증 후 커밋과 결과를 기록합니다.
+# V20 배포 완료 — 2026-09-17
+- 기존 저장소: https://github.com/asdlkjzxmn2-cmd/ADDER-game
+- 기존 Pages: https://asdlkjzxmn2-cmd.github.io/ADDER-game/
+- 기준: 사용자 수동 업로드 V19 a994c6f.
+- V20 구현 배포 커밋: 061fb0d.
+- 공개 HTML SHA-256이 제공한 docs/index.html과 일치. 버전 표시, HOME/BUY/REORDER/STOCK/ORDERS/ORIGINAL, SAVE 확인.
+- 공개 주소의 별도 테스트 브라우저에서 거래처 3종 양방향 정렬, 미거래 마지막, 즐겨찾기 필터, 상품 사진 3개 탭 아이콘, 주문 베스트셀러 배지, 경영 통계 검증 통과. 사용자 실제 세이브를 조작하지 않았습니다.
+- manifest 상대경로, 서비스워커 활성화 및 제어, 오프라인 재실행 확인. 각 사용자 기기의 현재 waiting/활성화 상태는 원격으로 알 수 없습니다.
+- 기존 V19 및 과거 버전 수정/삭제 없이 versions에 V19 HTML 및 당시 GitHub 저장소 ZIP 추가.
+- 반영: docs/index.html·manifest·service-worker, source/logic.js·client.js·style.css·template.html, ADDER_V20.html, rebuild/release, CHANGELOG/README/분석/테스트/보존 파일. manifest의 의미와 아이콘/SW 템플릿/저장 런타임은 유지(줄바꿈 차이는 빌드 해시에 반영).
+- 플레이 강제 새로고침 없음. 온라인에서 새판을 받은 뒤 기존 ADDER 창을 모두 종료하고 다시 실행하면 준비된 버전 적용. IndexedDB 저장 데이터 초기화 없음.
+- 로컬 V19 운영비·입고 묶음 회귀 테스트도 통과.
+- V21 개발은 시작하지 않았습니다. 테스트 중 V21/V22라는 표시는 PWA 업데이트 수명주기 검증용 임시 문자열뿐입니다.
